@@ -1,7 +1,6 @@
 /*
  * Digital Gift Card
- * A minimal, typography-focused design
- * that feels like a handwritten letter
+ * Warm, intimate design like a letter in golden light
  */
 
 * {
@@ -18,17 +17,38 @@ html {
 
 body {
     font-family: Georgia, 'Times New Roman', serif;
-    background-color: #fafafa;
     color: #2c2c2c;
     line-height: 1.8;
     min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    min-height: 100dvh;
+
+    /* Warm gradient - like soft afternoon light */
+    background:
+        radial-gradient(ellipse at top, #fff9f0 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, #f5e6d3 0%, transparent 40%),
+        radial-gradient(ellipse at bottom left, #faf0e6 0%, transparent 40%),
+        linear-gradient(180deg, #fffbf5 0%, #f8f4ef 50%, #f5ede4 100%);
+    background-attachment: fixed;
+}
+
+/* Subtle paper texture overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 main {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
-    padding: 4rem 2rem 6rem;
+    padding: 5rem 2rem 6rem;
 }
 
 /* Title */
@@ -38,10 +58,10 @@ header {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 400;
-    letter-spacing: 0.02em;
-    color: #1a1a1a;
+    letter-spacing: 0.03em;
+    color: #3d3027;
 }
 
 /* Personal message */
@@ -53,8 +73,8 @@ article {
     font-size: 1.1rem;
     font-style: italic;
     text-align: center;
-    color: #3d3d3d;
-    line-height: 2;
+    color: #5a4a3f;
+    line-height: 2.1;
 }
 
 /* Image and caption */
@@ -66,14 +86,18 @@ figure img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 2rem;
+    margin: 0 auto 2.5rem;
+    border-radius: 2px;
+    box-shadow:
+        0 4px 20px rgba(60, 40, 20, 0.08),
+        0 8px 40px rgba(60, 40, 20, 0.05);
 }
 
 figcaption {
-    font-size: 0.85rem;
-    color: #6b6b6b;
+    font-size: 0.9rem;
+    color: #7a6a5a;
     font-style: italic;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
 }
 
 /* Mobile refinements */
@@ -83,7 +107,7 @@ figcaption {
     }
 
     main {
-        padding: 3rem 1.5rem 4rem;
+        padding: 3.5rem 1.5rem 4rem;
     }
 
     header {
@@ -95,7 +119,7 @@ figcaption {
     }
 
     .message {
-        line-height: 2.2;
+        line-height: 2.3;
     }
 }
 
