@@ -129,3 +129,46 @@ figcaption {
         padding-bottom: calc(4rem + env(safe-area-inset-bottom));
     }
 }
+
+/* Landing page */
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 2rem;
+    text-align: center;
+}
+
+.intro {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #5a4a3f;
+    margin-bottom: 3rem;
+}
+
+.open-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1rem;
+    color: #5a4a3f;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    border: 1px solid #c4b5a5;
+    border-radius: 2px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+    background: #5a4a3f;
+    color: #fff9f0;
+    border-color: #5a4a3f;
+}
+
+.open-btn:active {
+    transform: scale(0.98);
+}
