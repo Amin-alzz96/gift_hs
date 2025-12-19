@@ -1,0 +1,107 @@
+/*
+ * Digital Gift Card
+ * A minimal, typography-focused design
+ * that feels like a handwritten letter
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #fafafa;
+    color: #2c2c2c;
+    line-height: 1.8;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+}
+
+/* Title */
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #1a1a1a;
+}
+
+/* Personal message */
+article {
+    margin-bottom: 5rem;
+}
+
+.message {
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+    color: #3d3d3d;
+    line-height: 2;
+}
+
+/* Image and caption */
+figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #6b6b6b;
+    font-style: italic;
+    letter-spacing: 0.01em;
+}
+
+/* Mobile refinements */
+@media (max-width: 480px) {
+    html {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 3rem 1.5rem 4rem;
+    }
+
+    header {
+        margin-bottom: 3rem;
+    }
+
+    article {
+        margin-bottom: 4rem;
+    }
+
+    .message {
+        line-height: 2.2;
+    }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+    main {
+        padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+    }
+}
